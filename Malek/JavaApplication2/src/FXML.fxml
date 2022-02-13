@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="758.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller=".FXMLController">
+   <children>
+      <VBox layoutX="23.0" layoutY="41.0" prefHeight="247.0" prefWidth="67.0" spacing="22.0">
+         <children>
+            <Label text="ID" />
+            <Label text="Login" />
+            <Label text="Email" />
+            <Label text="Password" />
+            <Label text="Name" />
+            <Label text="Surname" />
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </VBox>
+      <VBox layoutX="97.0" layoutY="35.0" prefHeight="198.0" prefWidth="137.0" spacing="14.0">
+         <children>
+            <TextField fx:id="tfid" prefWidth="164.0" />
+            <TextField fx:id="tflogin" layoutX="10.0" layoutY="10.0" onAction="#tflogin" />
+            <TextField fx:id="tfemail" layoutX="10.0" layoutY="36.0" onAction="#tfemain" />
+            <TextField fx:id="tfpassword" layoutX="10.0" layoutY="61.0" />
+            <TextField fx:id="tfname" layoutX="10.0" layoutY="87.0" />
+            <TextField fx:id="tfsurname" layoutX="10.0" layoutY="173.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvusers" layoutX="238.0" layoutY="8.0" prefHeight="262.0" prefWidth="510.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="30.4000244140625" text="ID" />
+          <TableColumn fx:id="collogin" prefWidth="63.20001220703125" text="Login" />
+            <TableColumn fx:id="coldemail" prefWidth="118.39996337890625" text="Email" />
+            <TableColumn fx:id="coldpassword" prefWidth="78.4000244140625" text="Password" />
+            <TableColumn fx:id="colname" prefWidth="87.20001220703125" text="Name" />
+            <TableColumn fx:id="colsurname" prefWidth="127.199951171875" text="Surname" />
+        </columns>
+      </TableView>
+      <Button fx:id="btninsert" layoutX="20.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="73.0" text="Insert" />
+      <Button fx:id="btnupdate" layoutX="107.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="74.0" text="Update" />
+      <Button fx:id="btndelete" layoutX="194.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="74.0" text="Delete" />
+   </children>
+</AnchorPane>
